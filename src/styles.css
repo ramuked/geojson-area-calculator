@@ -1,0 +1,120 @@
+/* Reset root */
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Background */
+body {
+  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.1.0');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.92) saturate(0.85);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+/* Center wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Pretty glass panel */
+.panel {
+  width: 480px;
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #222;
+  text-align: center;
+}
+
+.panel h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 18px;
+}
+
+/* Textarea styled like code editor */
+.input {
+  width: 100%;
+  max-width: 420px;
+  height: 260px;
+  padding: 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  line-height: 1.4;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  color: #111;
+}
+
+/* Button modern look */
+.btn {
+  margin-top: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4a7dff, #335dff);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: 140px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Error text */
+.err {
+  color: #c62828;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Output results */
+.output {
+  margin-top: 20px;
+  padding: 14px;
+  background: rgba(250,250,250,0.85);
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 420px;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
